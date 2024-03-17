@@ -1,0 +1,17 @@
+.title {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  column-gap: 10px;
+  padding: 0 20px;
+}
+
+.title::after,
+.title::before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  text-align: center;
+  background: gray;
+  display: block;
+}
