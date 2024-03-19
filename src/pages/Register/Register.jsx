@@ -56,13 +56,17 @@ const Register = () => {
               type="email"
               id="email"
               {...register("email", {
-                required: true,
-                pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+                required: "Email is required",
+
+                pattern: {
+                  value: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+                  message: "Invalid email address!",
+                },
               })}
               className="rounded-md px-4 py-2 border focus:outline-none focus:ring-1 focus:ring-blue-500 block w-full bg-white"
             />
-            {errors?.email?.type === "pattern" && (
-              <p className="text-red-500">Invalid email address!</p>
+            {errors?.email && (
+              <p className="text-red-500">{errors.email.message}</p>
             )}
           </div>
           <div className="flex flex-col space-y-1">

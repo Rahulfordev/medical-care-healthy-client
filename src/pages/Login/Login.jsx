@@ -36,7 +36,12 @@ const Login = () => {
               type="email"
               id="email"
               {...register("email", {
-                required: "Email Address is required",
+                required: "Email is required",
+
+                pattern: {
+                  value: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+                  message: "Invalid email address!",
+                },
               })}
               className="rounded-md px-4 py-2 border focus:outline-none focus:ring-1 focus:ring-blue-500 block w-full bg-white"
             />
