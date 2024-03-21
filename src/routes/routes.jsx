@@ -3,13 +3,13 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
-import PrivateRoute from "./PrivateRoute";
-import Appointment from "../pages/Appointment/Appointment";
+import PrivateRoute from "./PrivateRoute"; 
 import Dashboard from "../pages/Dashboard/Dashboard";
 import About from "../pages/About/About";
 import Reviews from "../pages/Reviews/Reviews";
 import Home from "../pages/Home/Home";
 import Contact from "../pages/Contact/Contact";
+import Appointment from "../pages/Appointment/Appointment/Appointment";
 
 const router = createBrowserRouter([
   {

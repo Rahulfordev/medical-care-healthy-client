@@ -1,0 +1,66 @@
+.rdp-weeknumber,
+.rdp-day {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  border: 2px solid transparent;
+  border-radius: 100%;
+}
+
+.rdp-head_cell {
+  vertical-align: middle;
+  font-size: 0.75em;
+  font-weight: 700;
+  text-align: center;
+  height: 100%;
+  height: var(--rdp-cell-size);
+  padding: 0;
+  text-transform: uppercase;
+}
+
+table {
+  margin-top: 15px;
+}
+
+.rdp-caption_label {
+  font-weight: 700;
+  color: rgb(51, 51, 51);
+  font-size: 18px;
+}
+
+.rdp-caption {
+  display: flex;
+  gap: 7rem;
+  align-items: center;
+  color: rgb(51, 51, 51);
+}
+
+.rdp-nav button {
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.rdp-nav button:hover {
+  background-color: #e7edff;
+}
+
+tr.rdp-head_row th {
+  padding-right: 22px;
+}
+
+.rdp-button:hover:not([disabled]):not(.rdp-day_selected) {
+  background-color: #e7edff;
+}
+
+.rdp-day_selected,
+.rdp-day_selected:focus-visible,
+.rdp-day_selected:hover {
+  color: white;
+  opacity: 1;
+  background-color: blue;
+}

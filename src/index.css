@@ -8,3 +8,7 @@ body {
   background-color: #fff;
   color: black;
 }
+
+.hospital-img {
+  max-width: 80% !important;
+}

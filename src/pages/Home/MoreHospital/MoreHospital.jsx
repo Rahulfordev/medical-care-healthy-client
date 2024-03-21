@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 const MoreHospital = ({ hospital }) => {
   const { title, description, img } = hospital;
   return (
