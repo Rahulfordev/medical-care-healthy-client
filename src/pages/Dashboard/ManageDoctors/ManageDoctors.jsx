@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import  { useState } from "react";
-import toast from "react-hot-toast"; 
+import { useState } from "react";
+import toast from "react-hot-toast";
 import Loading from "../../Shared/Loading/Loading";
 import ConfirmationModal from "../../Shared/ConfirmationModal/ConfirmationModal";
 
@@ -56,32 +56,51 @@ const ManageDoctors = () => {
     <div>
       <h2 className="text-3xl">Manage Doctors: {doctors?.length}</h2>
       <div className="overflow-x-auto">
-        <table className="table w-full">
-          <thead>
-            <tr>
-              <th></th>
-              <th>Avatar</th>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Specialty</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
+        <table className="overflow-x-auto border-collapse w-[100%] mt-10">
+          <tr>
+            <th className="py-3 bg-green-700 text-white border border-gray-500 text-left p-2">
+              NB
+            </th>
+            <th className="py-3 bg-green-700 text-white border border-gray-500 text-left p-2">
+              Avatar
+            </th>
+            <th className="py-3 bg-green-700 text-white border border-gray-500 text-left p-2">
+              Name
+            </th>
+            <th className="py-3 bg-green-700 text-white border border-gray-500 text-left p-2">
+              Email
+            </th>
+            <th className="py-3 bg-green-700 text-white border border-gray-500 text-left p-2">
+              Specialty
+            </th>
+            <th className="py-3 bg-green-700 text-white border border-gray-500 text-left p-2">
+              Action
+            </th>
+          </tr>
+
+          <>
             {doctors.map((doctor, i) => (
               <tr key={doctor._id}>
-                <th>{i + 1}</th>
-                <td>
+                <td className="border text-left border-gray-500 p-2">
+                  {i + 1}
+                </td>
+                <td className="border text-left border-gray-500 p-2">
                   <div className="avatar">
                     <div className="w-24 rounded-full">
                       <img src={doctor.image} alt="" />
                     </div>
                   </div>
                 </td>
-                <td>{doctor.name}</td>
-                <td>{doctor.email}</td>
-                <td>{doctor.specialty}</td>
-                <td>
+                <td className="border text-left border-gray-500 p-2">
+                  {doctor.name}
+                </td>
+                <td className="border text-left border-gray-500 p-2">
+                  {doctor.email}
+                </td>
+                <td className="border text-left border-gray-500 p-2">
+                  {doctor.specialty}
+                </td>
+                <td className="border text-left border-gray-500 p-2">
                   <label
                     onClick={() => setDeletingDoctor(doctor)}
                     htmlFor="confirmation-modal"
@@ -92,7 +111,7 @@ const ManageDoctors = () => {
                 </td>
               </tr>
             ))}
-          </tbody>
+          </>
         </table>
       </div>
       {deletingDoctor && (

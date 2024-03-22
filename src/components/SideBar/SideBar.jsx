@@ -9,12 +9,12 @@ function Sidebar() {
   return (
     <div className="drawer lg:drawer-open max-w-7xl mx-auto">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content flex flex-col items-center justify-center">
+      <div className="drawer-content  flex flex-col items-center justify-center">
         <label
           htmlFor="my-drawer-2"
-          className="btn bg-transparent border-none drawer-button lg:hidden"
+          className="hover:bg-blue-700 ml-8 btn bg-transparent border-none drawer-button lg:hidden"
         >
-          <FiAlignLeft className="text-2xl text-black" />
+          <FiAlignLeft className="text-2xl text-black hover:text-white" />
         </label>
       </div>
       <div className="drawer-side">

@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProviders";
 
@@ -23,29 +23,50 @@ const MyAppointment = () => {
 
   return (
     <div>
-      <h3 className="text-3xl mb-5">My Appointments</h3>
-      <div className="overflow-x-auto">
-        <table className="table w-full">
-          <thead>
-            <tr>
-              <th></th>
-              <th>Name</th>
-              <th>Treatment</th>
-              <th>Date</th>
-              <th>Time</th>
-              <th>Payment</th>
-            </tr>
-          </thead>
-          <tbody>
+      <h3 className="text-3xl mb-5 sm:mb-0">My Appointments</h3>
+      <div className="overflow-x-auto sm:overflow-x-clip">
+        <table className="overflow-x-auto border-collapse w-[100%] mt-10">
+          <tr>
+            <th className="py-3 bg-green-700 text-white border border-gray-500 text-left p-2">
+              NB
+            </th>
+            <th className="py-3 bg-green-700 text-white border border-gray-500 text-left p-2">
+              Name
+            </th>
+            <th className="py-3 bg-green-700 text-white border border-gray-500 text-left p-2">
+              Treatment
+            </th>
+            <th className="py-3 bg-green-700 text-white border border-gray-500 text-left p-2">
+              Date
+            </th>
+            <th className="py-3 bg-green-700 text-white border border-gray-500 text-left p-2">
+              Time
+            </th>
+            <th className="py-3 bg-green-700 text-white border border-gray-500 text-left p-2">
+              Payment
+            </th>
+          </tr>
+
+          <>
             {bookings &&
               bookings?.map((booking, i) => (
                 <tr key={booking._id}>
-                  <th>{i + 1}</th>
-                  <td>{booking.patient}</td>
-                  <td>{booking.treatment}</td>
-                  <td>{booking.appointmentDate}</td>
-                  <td>{booking.slot}</td>
-                  <td>
+                  <td className="border text-left border-gray-500 p-2">
+                    {i + 1}
+                  </td>
+                  <td className="border text-left border-gray-500 p-2">
+                    {booking.patient}
+                  </td>
+                  <td className="border text-left border-gray-500 p-2">
+                    {booking.treatment}
+                  </td>
+                  <td className="border text-left border-gray-500 p-2">
+                    {booking.appointmentDate}
+                  </td>
+                  <td className="border text-left border-gray-500 p-2">
+                    {booking.slot}
+                  </td>
+                  <td className="border text-left border-gray-500 p-2">
                     {booking.price && !booking.paid && (
                       <Link to={`/dashboard/payment/${booking._id}`}>
                         <button className="btn btn-primary btn-sm">Pay</button>
@@ -57,7 +78,7 @@ const MyAppointment = () => {
                   </td>
                 </tr>
               ))}
-          </tbody>
+          </>
         </table>
       </div>
     </div>

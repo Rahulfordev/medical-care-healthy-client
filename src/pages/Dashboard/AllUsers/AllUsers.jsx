@@ -1,4 +1,4 @@
-import { useQuery } from "@tanstack/react-query"; 
+import { useQuery } from "@tanstack/react-query";
 import toast from "react-hot-toast";
 
 const AllUsers = () => {
@@ -31,23 +31,36 @@ const AllUsers = () => {
     <div>
       <h2 className="text-3xl">All Users</h2>
       <div className="overflow-x-auto">
-        <table className="table w-full">
-          <thead>
-            <tr>
-              <th></th>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Admin</th>
-              <th>Delete</th>
-            </tr>
-          </thead>
-          <tbody>
+        <table className="overflow-x-auto border-collapse w-[100%] mt-10">
+          <tr>
+            <th className="py-3 bg-green-700 text-white border border-gray-500 text-left p-2">NB</th>
+            <th className="py-3 bg-green-700 text-white border border-gray-500 text-left p-2">
+              Name
+            </th>
+            <th className="py-3 bg-green-700 text-white border border-gray-500 text-left p-2">
+              Email
+            </th>
+            <th className="py-3 bg-green-700 text-white border border-gray-500 text-left p-2">
+              Admin
+            </th>
+            <th className="py-3 bg-green-700 text-white border border-gray-500 text-left p-2">
+              Delete
+            </th>
+          </tr>
+
+          <>
             {users.map((user, i) => (
               <tr key={user._id}>
-                <th>{i + 1}</th>
-                <td>{user.name}</td>
-                <td>{user.email}</td>
-                <td>
+                <td className="border text-left border-gray-500 p-2">
+                  {i + 1}
+                </td>
+                <td className="border text-left border-gray-500 p-2">
+                  {user.name}
+                </td>
+                <td className="border text-left border-gray-500 p-2">
+                  {user.email}
+                </td>
+                <td className="border text-left border-gray-500 p-2">
                   {user?.role !== "admin" && (
                     <button
                       onClick={() => handleMakeAdmin(user._id)}
@@ -57,12 +70,12 @@ const AllUsers = () => {
                     </button>
                   )}
                 </td>
-                <td>
+                <td className="border text-left border-gray-500 p-2">
                   <button className="btn btn-xs btn-danger">Delete</button>
                 </td>
               </tr>
             ))}
-          </tbody>
+          </>
         </table>
       </div>
     </div>

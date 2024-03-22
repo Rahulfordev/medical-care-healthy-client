@@ -1,9 +1,9 @@
-import  { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, NavLink } from "react-router-dom";
 
 import logo from "/public/image/logo.png";
-import "./navbar.css"; 
+import "./navbar.css";
 import { AuthContext } from "../../../providers/AuthProviders";
 
 const menuItems = [
@@ -49,7 +49,6 @@ function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-2">
         <div className="inline-flex items-center space-x-2">
           <img src={logo} alt="logo" />
-          
         </div>
         <div className="hidden lg:block">
           <ul className="inline-flex space-x-8">
@@ -105,7 +104,7 @@ function Navbar() {
                     </button>
                   </div>
                 </div>
-                <div className="mt-6">
+                <div className="mt-6 mb-4 lg:mb-0">
                   <nav className="grid gap-y-4">
                     {menuItems.map((item) => (
                       <NavLink
