@@ -1,8 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
 import style from "./register.module.css";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../providers/AuthProviders";
+import useToken from "../../hooks/useToken";
+import toast from "react-hot-toast";
 
 const Register = () => {
   const {
@@ -10,12 +14,35 @@ const Register = () => {
     formState: { errors },
     handleSubmit,
   } = useForm();
-  const handleRegister = (data) => {
-    console.log(data);
-  };
 
-  const handleGoogleLogin = () => {
-    // Handle Google login logic here
+  const { createUser, updateUser } = useContext(AuthContext);
+  const [signUpError, setSignUPError] = useState("");
+  const [createdUserEmail, setCreatedUserEmail] = useState("");
+  const [token] = useToken(createdUserEmail);
+  const navigate = useNavigate();
+
+  if (token) {
+    navigate("/");
+  }
+
+  const handleRegister = (data) => {
+    setSignUPError("");
+    createUser(data.email, data.password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        toast("User Created Successfully.");
+        const userInfo = {
+          displayName: data.name,
+        };
+        updateUser(userInfo)
+          .then(() => {})
+          .catch((err) => console.log(err));
+      })
+      .catch((error) => {
+        console.log(error);
+        setSignUPError(error.message);
+      });
   };
 
   return (
@@ -105,6 +132,9 @@ const Register = () => {
             Sign up
           </button>
         </form>
+        <div>
+          {signUpError && <p className="text-red-600">{signUpError}</p>}
+        </div>
         <div>
           <p className={style.title}>Or continue with</p>
         </div>

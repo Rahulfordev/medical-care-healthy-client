@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useQuery } from "@tanstack/react-query";
 import { format } from "date-fns";
-import  { useState } from "react";
+import { useState } from "react";
 import Loading from "../../Shared/Loading/Loading";
 import BookingModal from "../BookingModal/BookingModal";
 import AppointmentOption from "./AppointmentOption";
@@ -17,7 +17,7 @@ const AvailableAppointments = ({ selectedDate }) => {
     queryKey: ["appointmentOptions", date],
     queryFn: async () => {
       const res = await fetch(
-        `https://doctors-portal-server-rust.vercel.app/v2/appointmentOptions?date=${date}`
+        `http://localhost:3000/v2/appointmentOptions?date=${date}`
       );
       const data = await res.json();
       return data;
@@ -27,7 +27,7 @@ const AvailableAppointments = ({ selectedDate }) => {
   if (isLoading) {
     return <Loading></Loading>;
   }
-
+  console.log(appointmentOptions);
   return (
     <section className="my-16">
       <p className="text-center text-blue-700 font-bold">

@@ -1,9 +1,10 @@
-import React from "react";
+import  { useContext, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, NavLink } from "react-router-dom";
 
 import logo from "/public/image/logo.png";
-import "./navbar.css";
+import "./navbar.css"; 
+import { AuthContext } from "../../../providers/AuthProviders";
 
 const menuItems = [
   {
@@ -29,7 +30,15 @@ const menuItems = [
 ];
 
 function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((err) => console.log(err));
+  };
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -40,6 +49,7 @@ function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-2">
         <div className="inline-flex items-center space-x-2">
           <img src={logo} alt="logo" />
+          
         </div>
         <div className="hidden lg:block">
           <ul className="inline-flex space-x-8">
@@ -56,12 +66,22 @@ function Navbar() {
           </ul>
         </div>
         <div className="hidden lg:block">
-          <Link
-            to={"/login"}
-            className="rounded-md bg-blue-700 px-3 py-2 text-sm md:text-base font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-          >
-            Login
-          </Link>
+          {user?.uid ? (
+            <Link
+              to={"/login"}
+              onClick={handleLogOut}
+              className="rounded-md bg-blue-700 px-3 py-2 text-sm md:text-base font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            >
+              Sign out
+            </Link>
+          ) : (
+            <Link
+              to={"/login"}
+              className="rounded-md bg-blue-700 px-3 py-2 text-sm md:text-base font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            >
+              Login
+            </Link>
+          )}
         </div>
         <div className="lg:hidden">
           <Menu onClick={toggleMenu} className="h-6 w-6 cursor-pointer" />
@@ -100,12 +120,22 @@ function Navbar() {
                     ))}
                   </nav>
                 </div>
-                <Link
-                  to={"/login"}
-                  className="mt-4 w-full rounded-md bg-blue-700 px-3 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-                >
-                  Login
-                </Link>
+                {user?.uid ? (
+                  <Link
+                    to={"/login"}
+                    onClick={handleLogOut}
+                    className="rounded-md bg-blue-700 px-3 py-2 text-sm md:text-base font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                  >
+                    Sign out
+                  </Link>
+                ) : (
+                  <Link
+                    to={"/login"}
+                    className="rounded-md bg-blue-700 px-3 py-2 text-sm md:text-base font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                  >
+                    Login
+                  </Link>
+                )}
               </div>
             </div>
           </div>
