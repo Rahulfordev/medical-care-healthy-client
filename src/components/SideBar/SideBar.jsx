@@ -3,6 +3,11 @@ import useAdmin from "../../hooks/useAdmin";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
 import { FiAlignLeft } from "react-icons/fi";
+import { FaRegClock, FaRegUser } from "react-icons/fa";
+import { IoIosAddCircleOutline } from "react-icons/io";
+import { MdOutlineManageAccounts } from "react-icons/md";
+import { MdOutlineDashboard } from "react-icons/md";
+
 function Sidebar() {
   const { user } = useContext(AuthContext);
   const [isAdmin] = useAdmin(user?.email);
@@ -23,20 +28,33 @@ function Sidebar() {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <ul className="menu lg:mx-4 w-60 lg:rounded-md min-h-full lg:min-h-[90%] bg-blue-700 text-white">
+        <ul className="font-custom text-base menu pt-14 lg:pt-4 lg:mx-4 w-60 lg:rounded-md min-h-full lg:min-h-[90%] bg-blue-700 text-white">
           <li>
-            <Link to="/dashboard">My Appointments</Link>
+            <Link to="/dashboard">
+              <FaRegClock /> My Appointments
+            </Link>
           </li>
           {isAdmin && (
             <>
               <li>
-                <Link to="/dashboard/allusers">All users</Link>
+                <Link to="/dashboard/allusers">
+                  <FaRegUser /> All users
+                </Link>
               </li>
               <li>
-                <Link to="/dashboard/adddoctor">Add A Doctor</Link>
+                <Link to="/dashboard/adddoctor">
+                  <IoIosAddCircleOutline /> Add A Doctor
+                </Link>
               </li>
               <li>
-                <Link to="/dashboard/managedoctors">Manage Doctors</Link>
+                <Link to="/dashboard/managedoctors">
+                  <MdOutlineManageAccounts /> Manage Doctors
+                </Link>
+              </li>
+              <li>
+                <Link to="/dashboard/admin">
+                  <MdOutlineDashboard /> Dashboard
+                </Link>
               </li>
             </>
           )}

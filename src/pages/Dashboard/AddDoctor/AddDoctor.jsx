@@ -1,4 +1,4 @@
-import { useQuery } from "@tanstack/react-query"; 
+import { useQuery } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
@@ -81,7 +81,7 @@ const AddDoctor = () => {
             {...register("name", {
               required: "Name is Required",
             })}
-            className="input input-bordered w-full max-w-xs"
+            className="bg-white input input-bordered w-full max-w-xs"
           />
           {errors.name && <p className="text-red-500">{errors.name.message}</p>}
         </div>
@@ -95,7 +95,7 @@ const AddDoctor = () => {
             {...register("email", {
               required: true,
             })}
-            className="input input-bordered w-full max-w-xs"
+            className="bg-white input input-bordered w-full max-w-xs"
           />
           {errors.email && (
             <p className="text-red-500">{errors.email.message}</p>
@@ -108,7 +108,7 @@ const AddDoctor = () => {
           </label>
           <select
             {...register("specialty")}
-            className="select input-bordered w-full max-w-xs"
+            className="bg-white select input-bordered w-full max-w-xs"
           >
             {specialties.map((specialty) => (
               <option key={specialty._id} value={specialty.name}>
@@ -127,12 +127,12 @@ const AddDoctor = () => {
             {...register("image", {
               required: "Photo is Required",
             })}
-            className="input input-bordered w-full max-w-xs"
+            className="bg-white input input-bordered w-full max-w-xs"
           />
           {errors.img && <p className="text-red-500">{errors.img.message}</p>}
         </div>
         <input
-          className="btn btn-accent w-full mt-4"
+          className="btn btn-accent bg-blue-700 text-white hover:bg-blue-500 w-full mt-4"
           value="Add Doctor"
           type="submit"
         />

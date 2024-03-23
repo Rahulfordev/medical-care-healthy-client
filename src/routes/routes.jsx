@@ -3,7 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
-import PrivateRoute from "./PrivateRoute"; 
+import PrivateRoute from "./PrivateRoute";
 import About from "../pages/About/About";
 import Reviews from "../pages/Reviews/Reviews";
 import Home from "../pages/Home/Home";
@@ -17,6 +17,7 @@ import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
 import AddDoctor from "../pages/Dashboard/AddDoctor/AddDoctor";
 import ManageDoctors from "../pages/Dashboard/ManageDoctors/ManageDoctors";
 import Payment from "../pages/Dashboard/Payment/Payment";
+import Dashboard from "../pages/Dashboard/Dashboard/Dashboard";
 
 const router = createBrowserRouter([
   {
@@ -46,7 +47,7 @@ const router = createBrowserRouter([
       {
         path: "/reviews",
         element: <Reviews></Reviews>,
-      }, 
+      },
       {
         path: "/appointment",
         element: <Appointment></Appointment>,
@@ -63,9 +64,18 @@ const router = createBrowserRouter([
     errorElement: <DisplayError></DisplayError>,
     children: [
       {
-        path: "/dashboard",
+        path: "/dashboard", 
         element: <MyAppointment></MyAppointment>,
       },
+      {
+        path: "/dashboard/admin",
+        element: (
+          <AdminRoute>
+            <Dashboard></Dashboard>
+          </AdminRoute>
+        ),
+      },
+
       {
         path: "/dashboard/allusers",
         element: (
