@@ -37,7 +37,7 @@ const Register = () => {
         };
         updateUser(userInfo)
           .then(() => {
-            saveUser(data.name, data.email);
+            saveDatabase(data.name, data.email);
           })
           .catch((err) => console.log(err));
       })
@@ -47,9 +47,10 @@ const Register = () => {
       });
   };
 
-  const saveUser = (name, email) => {
+  const saveDatabase = (name, email) => {
     const user = { name, email };
-    fetch("http://localhost:3000/users", {
+
+    fetch("http://localhost:5000/users", {
       method: "POST",
       headers: {
         "content-type": "application/json",

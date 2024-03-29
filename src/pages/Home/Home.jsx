@@ -1,5 +1,6 @@
 import Header from "../../components/Header/Header";
 import MoreHospitals from "./MoreHospital/MoreHospitals";
+import OurInfo from "./OurInfo/OurInfo";
 import Question from "./Question/Question";
 import Services from "./Services/Services";
 
@@ -8,6 +9,7 @@ const Home = () => {
     <div className="mx-5">
       <Header />
       <Services />
+      <OurInfo />
       <MoreHospitals />
       <Question />
     </div>

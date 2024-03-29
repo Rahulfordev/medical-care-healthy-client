@@ -23,7 +23,7 @@ const AddDoctor = () => {
       return data;
     },
   });
-
+  console.log(specialties);
   const handleAddDoctor = (data) => {
     const image = data.image[0];
     const formData = new FormData();
@@ -111,8 +111,8 @@ const AddDoctor = () => {
             className="bg-white select input-bordered w-full max-w-xs"
           >
             {specialties.map((specialty) => (
-              <option key={specialty._id} value={specialty.name}>
-                {specialty.name}
+              <option key={specialty._id} value={specialty.specialty}>
+                {specialty.specialty}
               </option>
             ))}
           </select>
