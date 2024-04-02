@@ -64,7 +64,7 @@ const router = createBrowserRouter([
     errorElement: <DisplayError></DisplayError>,
     children: [
       {
-        path: "/dashboard", 
+        path: "/dashboard",
         element: <MyAppointment></MyAppointment>,
       },
       {
@@ -104,7 +104,9 @@ const router = createBrowserRouter([
         path: "/dashboard/payment/:id",
         element: <Payment></Payment>,
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/bookings/${params.id}`),
+          fetch(
+            `https://medical-care-healthy-server.vercel.app/bookings/${params.id}`
+          ),
       },
     ],
   },
