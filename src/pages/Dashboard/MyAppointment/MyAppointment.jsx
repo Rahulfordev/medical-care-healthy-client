@@ -23,9 +23,9 @@ const MyAppointment = () => {
 
   return (
     <div>
-      <h3 className="text-3xl mb-5 sm:mb-0">My Appointments</h3>
+      <h3 className="text-3xl mb-4">My Appointments</h3>
       <div className="overflow-x-auto sm:overflow-x-clip">
-        <table className="overflow-x-auto border-collapse w-[100%] mt-10">
+        <table className="overflow-x-auto border-collapse w-[100%] mt-0">
           <tr>
             <th className="py-3 bg-green-700 text-white border border-gray-500 text-left p-2">
               NB

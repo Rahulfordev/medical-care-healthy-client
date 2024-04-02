@@ -3,7 +3,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import Loading from "../../Shared/Loading/Loading";
 import ConfirmationModal from "../../Shared/ConfirmationModal/ConfirmationModal";
-
+import "./manage.css";
 const ManageDoctors = () => {
   const [deletingDoctor, setDeletingDoctor] = useState(null);
 
@@ -53,10 +53,10 @@ const ManageDoctors = () => {
   }
 
   return (
-    <div>
-      <h2 className="text-3xl">Manage Doctors: {doctors?.length}</h2>
-      <div className="overflow-x-auto">
-        <table className="overflow-x-auto border-collapse w-[100%] mt-10">
+    <div className="custom-scrollbar">
+      <h2 className="text-3xl mb-4">Manage Doctors: {doctors?.length}</h2>
+      <div className="overflow-x-auto h-[500px]">
+        <table className="overflow-x-auto border-collapse w-[100%] mt-0">
           <tr>
             <th className="py-3 bg-green-700 text-white border border-gray-500 text-left p-2">
               NB
@@ -104,7 +104,7 @@ const ManageDoctors = () => {
                   <label
                     onClick={() => setDeletingDoctor(doctor)}
                     htmlFor="confirmation-modal"
-                    className="btn btn-sm btn-error"
+                    className="btn btn-sm btn-error text-white"
                   >
                     Delete
                   </label>

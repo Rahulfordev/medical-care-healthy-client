@@ -58,7 +58,7 @@ const BookingModal = ({ treatment, setTreatment, selectedDate, refetch }) => {
         <div className="modal-box relative bg-white">
           <label
             htmlFor="booking-modal"
-            className="btn btn-sm btn-circle absolute right-2 top-2"
+            className="btn btn-sm bg-blue-700 border-none hover:bg-blue-500 btn-circle absolute right-2 top-2"
           >
             ✕
           </label>
@@ -69,9 +69,8 @@ const BookingModal = ({ treatment, setTreatment, selectedDate, refetch }) => {
           >
             <input
               type="text"
-              disabled
               value={date}
-              className="input w-full input-bordered "
+              className="input w-full bg-white input-bordered "
             />
             <select
               name="slot"
@@ -87,7 +86,6 @@ const BookingModal = ({ treatment, setTreatment, selectedDate, refetch }) => {
               name="name"
               type="text"
               defaultValue={user?.displayName}
-              disabled
               placeholder="Your Name"
               className="bg-white input w-full input-bordered"
             />
@@ -95,9 +93,8 @@ const BookingModal = ({ treatment, setTreatment, selectedDate, refetch }) => {
               name="email"
               type="email"
               defaultValue={user?.email}
-              disabled
               placeholder="Email Address"
-              className="input w-full input-bordered"
+              className="input w-full bg-white input-bordered"
             />
             <input
               name="phone"
@@ -107,7 +104,7 @@ const BookingModal = ({ treatment, setTreatment, selectedDate, refetch }) => {
             />
             <br />
             <input
-              className="btn bg-blue-700 hover:bg-blue-500 text-white w-full"
+              className="btn bg-blue-700 border-none hover:bg-blue-500 text-white w-full"
               type="submit"
               value="Submit"
             />

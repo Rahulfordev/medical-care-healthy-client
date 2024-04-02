@@ -12,7 +12,7 @@ function Sidebar() {
   const { user } = useContext(AuthContext);
   const [isAdmin] = useAdmin(user?.email);
   return (
-    <div className="drawer lg:drawer-open max-w-7xl mx-auto">
+    <div className="drawer lg:drawer-open max-w-7xl mx-auto z-40">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content  flex flex-col items-center justify-center">
         <label
