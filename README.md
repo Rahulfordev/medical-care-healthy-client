@@ -8,8 +8,10 @@ medical care healthy is a web application designed to manage appointments and bo
 - React Router DOM
 - React Hook Form
 - Firebase Authentication
-- JSON API
-- React Toastify
+- swiper
+- react-day-picker
+- tailwind css
+- react-query
 
 ## Features
 
