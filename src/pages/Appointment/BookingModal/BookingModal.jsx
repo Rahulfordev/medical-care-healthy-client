@@ -31,7 +31,7 @@ const BookingModal = ({ treatment, setTreatment, selectedDate, refetch }) => {
     // TODO: send data to the server
     // and once data is saved then close the modal
     // and display success toast
-    fetch("https://medical-care-healthy-server.vercel.app/bookings", {
+    fetch("https://medical-care-healthy-server.onrender.com/bookings", {
       method: "POST",
       headers: {
         "content-type": "application/json",

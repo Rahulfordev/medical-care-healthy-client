@@ -17,7 +17,7 @@ const AvailableAppointments = ({ selectedDate }) => {
     queryKey: ["appointmentOptions", date],
     queryFn: async () => {
       const res = await fetch(
-        `https://medical-care-healthy-server.vercel.app/v2/appointmentOptions?date=${date}`
+        `https://medical-care-healthy-server.onrender.com/v2/appointmentOptions?date=${date}`
       );
       const data = await res.json();
       return data;

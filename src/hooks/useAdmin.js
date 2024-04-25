@@ -6,7 +6,7 @@ const useAdmin = (email) => {
   useEffect(() => {
     if (email) {
       fetch(
-        `https://medical-care-healthy-server.vercel.app/users/admin/${email}`
+        `https://medical-care-healthy-server.onrender.com/users/admin/${email}`
       )
         .then((res) => res.json())
         .then((data) => {

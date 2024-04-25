@@ -19,7 +19,7 @@ const AddDoctor = () => {
     queryKey: ["specialty"],
     queryFn: async () => {
       const res = await fetch(
-        "https://medical-care-healthy-server.vercel.app/appointmentSpecialty"
+        "https://medical-care-healthy-server.onrender.com/appointmentSpecialty"
       );
       const data = await res.json();
       return data;
@@ -47,7 +47,7 @@ const AddDoctor = () => {
           };
 
           // save doctor information to the database
-          fetch("https://medical-care-healthy-server.vercel.app/doctors", {
+          fetch("https://medical-care-healthy-server.onrender.com/doctors", {
             method: "POST",
             headers: {
               "content-type": "application/json",

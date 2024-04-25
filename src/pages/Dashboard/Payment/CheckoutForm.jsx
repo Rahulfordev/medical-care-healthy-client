@@ -15,7 +15,7 @@ const CheckoutForm = ({ booking }) => {
   useEffect(() => {
     // Create PaymentIntent as soon as the page loads
     fetch(
-      "https://medical-care-healthy-server.vercel.app/create-payment-intent",
+      "https://medical-care-healthy-server.onrender.com/create-payment-intent",
       {
         method: "POST",
         headers: {
@@ -78,7 +78,7 @@ const CheckoutForm = ({ booking }) => {
         email,
         bookingId: _id,
       };
-      fetch("https://medical-care-healthy-server.vercel.app/payments", {
+      fetch("https://medical-care-healthy-server.onrender.com/payments", {
         method: "POST",
         headers: {
           "content-type": "application/json",

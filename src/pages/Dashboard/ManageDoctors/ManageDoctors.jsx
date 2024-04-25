@@ -20,7 +20,7 @@ const ManageDoctors = () => {
     queryFn: async () => {
       try {
         const res = await fetch(
-          "https://medical-care-healthy-server.vercel.app/doctors",
+          "https://medical-care-healthy-server.onrender.com/doctors",
           {
             headers: {
               authorization: `bearer ${localStorage.getItem("accessToken")}`,
@@ -37,7 +37,7 @@ const ManageDoctors = () => {
 
   const handleDeleteDoctor = (doctor) => {
     fetch(
-      `https://medical-care-healthy-server.vercel.app/doctors/${doctor._id}`,
+      `https://medical-care-healthy-server.onrender.com/doctors/${doctor._id}`,
       {
         method: "DELETE",
         headers: {

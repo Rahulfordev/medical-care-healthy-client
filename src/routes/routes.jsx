@@ -105,7 +105,7 @@ const router = createBrowserRouter([
         element: <Payment></Payment>,
         loader: ({ params }) =>
           fetch(
-            `https://medical-care-healthy-server.vercel.app/bookings/${params.id}`
+            `https://medical-care-healthy-server.onrender.com/bookings/${params.id}`
           ),
       },
     ],
