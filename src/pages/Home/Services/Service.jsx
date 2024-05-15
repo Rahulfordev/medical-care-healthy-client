@@ -8,8 +8,10 @@ const Service = ({ service }) => {
         <img src={img} alt="Shoes" className="max-w-[80%]" />
       </figure>
       <div className="card-body items-center text-center">
-        <h2 className="card-title text-blue-700">{name}</h2>
-        <p>{description}</p>
+        <h2 className="card-title text-2xl font-bold text-[#223645] hover:text-[#e12454]">
+          {name}
+        </h2>
+        <p className="text-[#223645]">{description}</p>
       </div>
     </div>
   );

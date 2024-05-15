@@ -45,10 +45,10 @@ function Navbar() {
   };
 
   return (
-    <div className="relative w-full bg-white font-custom">
+    <div className="relative w-full bg-white font-custom border-b">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-2">
         <div className="inline-flex items-center space-x-2">
-          <img src={logo} alt="logo" />
+          <img src={logo} alt="logo" className="w-36" />
         </div>
         <div className="hidden lg:block">
           <ul className="inline-flex space-x-8">
@@ -56,7 +56,7 @@ function Navbar() {
               <li key={item.name}>
                 <NavLink
                   to={item.href}
-                  className="text-sm md:text-base font-medium text-gray-800 hover:text-gray-900"
+                  className="text-sm md:text-base font-medium text-gray-800 hover:text-[#e12454]"
                 >
                   {item.name}
                 </NavLink>
@@ -69,14 +69,14 @@ function Navbar() {
             <Link
               to={"/login"}
               onClick={handleLogOut}
-              className="rounded-md bg-blue-700 px-3 py-2 text-sm md:text-base font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+              className="rounded-md bg-[#e12454] px-3 py-2 text-sm md:text-base font-semibold text-white shadow-sm hover:bg-[#e12453ec] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
             >
               Sign out
             </Link>
           ) : (
             <Link
               to={"/login"}
-              className="rounded-md bg-blue-700 px-3 py-2 text-sm md:text-base font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+              className="rounded-md bg-[#e12454] px-3 py-2 text-sm md:text-base font-semibold text-white shadow-sm hover:bg-[#e12453ec] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
             >
               Login
             </Link>
@@ -91,7 +91,7 @@ function Navbar() {
               <div className="px-5 pb-6 pt-5">
                 <div className="flex items-center justify-between">
                   <div className="inline-flex items-center space-x-2">
-                    <img src={logo} alt="logo" />
+                    <img src={logo} alt="logo" className="w-28" />
                   </div>
                   <div className="-mr-2">
                     <button
@@ -123,14 +123,14 @@ function Navbar() {
                   <Link
                     to={"/login"}
                     onClick={handleLogOut}
-                    className="rounded-md bg-blue-700 px-3 py-2 text-sm md:text-base font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                    className="rounded-md bg-[#e12454] px-3 py-2 text-sm md:text-base font-semibold text-white shadow-sm hover:bg-[#e12453ec] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                   >
                     Sign out
                   </Link>
                 ) : (
                   <Link
                     to={"/login"}
-                    className="rounded-md bg-blue-700 px-3 py-2 text-sm md:text-base font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                    className="rounded-md bg-[#e12454] px-3 py-2 text-sm md:text-base font-semibold text-white shadow-sm hover:bg-[#e12453ec] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                   >
                     Login
                   </Link>
