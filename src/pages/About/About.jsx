@@ -7,10 +7,11 @@ const About = () => {
           <img src={about} alt="about image" className="rounded-md" />
         </div>
         <div className="mt-6 sm:mt-0">
-          <h1 className="text-blue-700 text-4xl font-semibold">
-            Medical Care Healthy
+          <h5 className="font-medium text-lg text-[#647589]">About Us</h5>
+          <h1 className="text-[#223645] text-4xl font-bold hover:text-[#e12454]">
+            Short Story About <br /> Medical Care Healthy.
           </h1>
-          <p className="my-4">
+          <p className="my-4 text-[#223645]">
             Medical Care Healthy is the largest network of the world’s finest
             medical experts and has pioneered ground-breaking healthcare
             technologies in India. It also has India’s first, largest and most

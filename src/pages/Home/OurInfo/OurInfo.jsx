@@ -5,8 +5,9 @@ import { BsFillTelephoneOutboundFill } from "react-icons/bs";
 const OurInfo = () => {
   return (
     <div className="mt-[70px] max-w-7xl mx-auto">
+      
       <div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mx-5">
           {/* part 1 */}
           <div className="bg-orange-600 p-12 rounded-lg">
             <div className="flex gap-3">

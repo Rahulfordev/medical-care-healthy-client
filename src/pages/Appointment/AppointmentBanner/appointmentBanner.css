@@ -62,5 +62,5 @@ tr.rdp-head_row th {
 .rdp-day_selected:hover {
   color: white;
   opacity: 1;
-  background-color: blue;
+  background-color: #e12454;
 }

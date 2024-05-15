@@ -134,7 +134,7 @@ const AddDoctor = () => {
           {errors.img && <p className="text-red-500">{errors.img.message}</p>}
         </div>
         <input
-          className="btn btn-accent bg-blue-700 text-white hover:bg-blue-500 w-full mt-4"
+          className="btn btn-accent bg-[#e12454] hover:bg-[#e12453d7] border-none text-white w-full mt-4"
           value="Add Doctor"
           type="submit"
         />

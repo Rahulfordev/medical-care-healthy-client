@@ -3,7 +3,7 @@
 const AppointmentOption = ({ appointmentOption, setTreatment }) => {
   const { name, price, slots, image, specialty } = appointmentOption;
   return (
-    <div className="card shadow-xl">
+    <div className="card bg-white">
       <div className="card-body text-center">
         <div className="items-center flex justify-center">
           <img
@@ -12,20 +12,22 @@ const AppointmentOption = ({ appointmentOption, setTreatment }) => {
             className="w-48 h-48 rounded-lg"
           />
         </div>
-        <h2 className="text-2xl text-blue-700 font-bold text-center">{name}</h2>
-        <p className="font-semibold">{specialty}</p>
+        <h2 className="text-2xl text-[#223645] font-bold text-center hover:text-[#e12454] cursor-pointer">
+          {name}
+        </h2>
+        <p className="font-semibold text-[#223645]">{specialty}</p>
         <p>{slots.length > 0 ? slots[0] : "Try Another day"}</p>
-        <p>
+        <p className="text-[#223645]">
           {slots.length} {slots.length > 1 ? "spaces" : "space"} available
         </p>
-        <p>
-          <small>Price: ${price}</small>
+        <p className="text-[#223645]">
+          <small className="font-bold">Price: ${price}</small>
         </p>
         <div className="card-actions justify-center">
           <label
             disabled={slots.length === 0}
             htmlFor="booking-modal"
-            className="btn btn-primary bg-blue-700 hover:bg-blue-500 text-white"
+            className="btn btn-primary bg-[#e12454] hover:bg-[#e12453d7] text-white border-none"
             onClick={() => setTreatment(appointmentOption)}
           >
             Book Appointment

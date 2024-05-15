@@ -7,7 +7,7 @@ const Contact = () => {
             {/* contact from */}
             <div className="flex items-center justify-center">
               <div className="px-2 md:px-12">
-                <p className="text-2xl font-bold text-blue-700 md:text-4xl">
+                <p className="text-2xl font-bold text-[#e12454] md:text-4xl">
                   Contact Us
                 </p>
                 <p className="mt-4 text-lg text-gray-600">
@@ -76,7 +76,7 @@ const Contact = () => {
                   </div>
                   <button
                     type="button"
-                    className="w-full rounded-md bg-blue-700 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                    className="w-full rounded-md bg-[#e12454] hover:bg-[#e12453d7] px-3 py-2 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                   >
                     Send Message
                   </button>

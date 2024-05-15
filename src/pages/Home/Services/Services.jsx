@@ -35,26 +35,26 @@ const Services = () => {
       name: "Blood Cancer",
       description:
         "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
-      img: three,
+      img: four,
     },
     {
       id: 5,
       name: "Neurology Sargery",
       description:
         "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
-      img: three,
+      img: five,
     },
     {
       id: 6,
       name: "Allergic Issue",
       description:
         "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
-      img: three,
+      img: six,
     },
   ];
 
   return (
-    <div className="w-full bg-[#f4f9fc] pt-10 pb-14">
+    <div className="w-full bg-[#f4f9fc] pt-10 pb-14 my-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
           <h3 className="text-xl font-bold text-[#e12454] uppercase">

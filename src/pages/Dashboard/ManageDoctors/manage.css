@@ -7,7 +7,7 @@
 
   /* Customize scrollbar handle */
   ::-webkit-scrollbar-thumb {
-    background-color: #1d4ed8; /* Color of the scrollbar handle */
+    background-color: #e12454; /* Color of the scrollbar handle */
     border-radius: 6px; /* Radius of the scrollbar handle */
   }
 }

@@ -58,11 +58,11 @@ const BookingModal = ({ treatment, setTreatment, selectedDate, refetch }) => {
         <div className="modal-box relative bg-white">
           <label
             htmlFor="booking-modal"
-            className="btn btn-sm bg-blue-700 border-none hover:bg-blue-500 btn-circle absolute right-2 top-2"
+            className="btn btn-sm bg-[#e9f2f8] border-none hover:bg-[#e12454] btn-circle absolute right-2 top-2"
           >
             ✕
           </label>
-          <h3 className="text-lg text-blue-700 font-bold">{treatmentName}</h3>
+          <h3 className="text-lg text-[#e12454] font-bold">{treatmentName}</h3>
           <form
             onSubmit={handleBooking}
             className="grid grid-cols-1 gap-3 mt-10"
@@ -104,7 +104,7 @@ const BookingModal = ({ treatment, setTreatment, selectedDate, refetch }) => {
             />
             <br />
             <input
-              className="btn bg-blue-700 border-none hover:bg-blue-500 text-white w-full"
+              className="btn bg-[#e12454] hover:bg-[#e12453d7] border-none text-white w-full"
               type="submit"
               value="Submit"
             />

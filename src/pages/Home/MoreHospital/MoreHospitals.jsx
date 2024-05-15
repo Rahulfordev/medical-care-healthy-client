@@ -27,16 +27,18 @@ const MoreHospitals = () => {
   ];
 
   return (
-    <div className="mt-16 max-w-7xl mx-auto">
-      <div className="text-center">
-        <h3 className="text-xl font-bold text-blue-700 uppercase">
-          Hospitals in Apollo Group Hospitals Network
-        </h3>
-      </div>
-      <div className="mt-8 flex gap-8 flex-wrap items-center justify-center">
-        {Hospitals.map((hospital) => (
-          <MoreHospital key={hospital.id} hospital={hospital}></MoreHospital>
-        ))}
+    <div className="bg-[#f4f9fc] pt-10 pb-14 mt-16">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center">
+          <h3 className="text-lg md:text-3xl font-bold text-[#e12454] uppercase">
+            Hospitals in Apollo Group <br /> Hospitals Network
+          </h3>
+        </div>
+        <div className="mx-5 mt-8 flex gap-8 flex-wrap items-center justify-center">
+          {Hospitals.map((hospital) => (
+            <MoreHospital key={hospital.id} hospital={hospital}></MoreHospital>
+          ))}
+        </div>
       </div>
     </div>
   );

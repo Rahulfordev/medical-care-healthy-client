@@ -29,27 +29,31 @@ const AvailableAppointments = ({ selectedDate }) => {
   }
   console.log(appointmentOptions);
   return (
-    <section className="my-16">
-      <p className="text-center text-blue-700 font-bold">
-        Available Appointments on {format(selectedDate, "PP")}
-      </p>
-      <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-6">
-        {appointmentOptions.map((option) => (
-          <AppointmentOption
-            key={option._id}
-            appointmentOption={option}
-            setTreatment={setTreatment}
-          ></AppointmentOption>
-        ))}
+    <section className="pb-16 pt-10 bg-[#f4f9fc]">
+      <div className="max-w-7xl mx-auto">
+        <div className="mx-5">
+          <p className="text-center text-[#e12454] font-bold text-2xl mb-8">
+            Available Appointments on {format(selectedDate, "PP")}
+          </p>
+          <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-6">
+            {appointmentOptions.map((option) => (
+              <AppointmentOption
+                key={option._id}
+                appointmentOption={option}
+                setTreatment={setTreatment}
+              ></AppointmentOption>
+            ))}
+          </div>
+          {treatment && (
+            <BookingModal
+              selectedDate={selectedDate}
+              treatment={treatment}
+              setTreatment={setTreatment}
+              refetch={refetch}
+            ></BookingModal>
+          )}
+        </div>
       </div>
-      {treatment && (
-        <BookingModal
-          selectedDate={selectedDate}
-          treatment={treatment}
-          setTreatment={setTreatment}
-          refetch={refetch}
-        ></BookingModal>
-      )}
     </section>
   );
 };

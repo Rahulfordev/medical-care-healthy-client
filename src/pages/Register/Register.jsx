@@ -67,7 +67,9 @@ const Register = () => {
     <div className="flex items-center justify-center bg-gray-100">
       <div className="mx-4 sm:mx-0 container-div max-w-md w-full space-y-8 rounded shadow-xl px-8 py-12 md:px-12 md:max-w-lg bg-white mt-8 mb-8">
         <div>
-          <h1 className="text-2xl font-bold text-center">Sign up</h1>
+          <h1 className="text-2xl font-bold text-center text-[#223645]">
+            Sign up
+          </h1>
         </div>
         <form className="space-y-6" onSubmit={handleSubmit(handleRegister)}>
           <div className="flex flex-col space-y-1">
@@ -84,7 +86,7 @@ const Register = () => {
                   message: "Name must be 3 letters long",
                 },
               })}
-              className="rounded-md px-4 py-2 border focus:outline-none focus:ring-1 focus:ring-blue-500 block w-full bg-white"
+              className="rounded-md px-4 py-2 border focus:outline-none focus:ring-1 focus:ring-[#e12454] block w-full bg-white"
             />
             {errors.name && (
               <p className="text-red-500">{errors.name.message}</p>
@@ -108,7 +110,7 @@ const Register = () => {
                   message: "Invalid email address!",
                 },
               })}
-              className="rounded-md px-4 py-2 border focus:outline-none focus:ring-1 focus:ring-blue-500 block w-full bg-white"
+              className="rounded-md px-4 py-2 border focus:outline-none focus:ring-1 focus:ring-[#e12454] block w-full bg-white"
             />
             {errors?.email && (
               <p className="text-red-500">{errors.email.message}</p>
@@ -136,7 +138,7 @@ const Register = () => {
                     "Password must have uppercase, number and special characters",
                 },
               })}
-              className="rounded-md px-4 py-2 border focus:outline-none focus:ring-1 focus:ring-blue-500 block w-full bg-white"
+              className="rounded-md px-4 py-2 border focus:outline-none focus:ring-1 focus:ring-[#e12454] block w-full bg-white"
             />
             {errors.password && (
               <p className="text-red-500">{errors.password.message}</p>
@@ -145,7 +147,7 @@ const Register = () => {
 
           <button
             type="submit"
-            className="w-full items-center text-center px-4 py-2 rounded-md bg-blue-700 text-white font-bold shadow-sm hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            className="w-full items-center text-center px-4 py-2 rounded-md bg-[#e12454] hover:bg-[#e12453d7] text-white font-bold shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2"
           >
             Sign up
           </button>
@@ -157,7 +159,7 @@ const Register = () => {
           <p className={style.title}>Or continue with</p>
         </div>
         <div className="flex justify-between gap-2">
-          <Link className="flex items-center gap-4 py-2 px-6 sm:px-[52px] border border-sky-500 rounded-md">
+          <Link className="flex items-center gap-4 py-2 px-6 sm:px-[52px] border border-[#e12454] rounded-md">
             <svg className="w-[20px]" aria-hidden="true" viewBox="0 0 24 24">
               <path
                 d="M12.0003 4.75C13.7703 4.75 15.3553 5.36002 16.6053 6.54998L20.0303 3.125C17.9502 1.19 15.2353 0 12.0003 0C7.31028 0 3.25527 2.69 1.28027 6.60998L5.27028 9.70498C6.21525 6.86002 8.87028 4.75 12.0003 4.75Z"
@@ -178,7 +180,7 @@ const Register = () => {
             </svg>
             <span className="font-semibold">Google</span>
           </Link>
-          <Link className="flex items-center gap-4 py-2 px-6 sm:px-[52px] border border-sky-500 rounded-md">
+          <Link className="flex items-center gap-4 py-2 px-6 sm:px-[52px] border border-[#e12454] rounded-md">
             <svg
               className="w-[20px]"
               aria-hidden="true"
@@ -197,7 +199,7 @@ const Register = () => {
         <div>
           <span>
             Already have an account?{" "}
-            <Link to={"/login"} className="text-blue-700 hover:underline">
+            <Link to={"/login"} className="text-[#e12454] hover:underline">
               Sign in
             </Link>
           </span>

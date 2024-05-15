@@ -1,67 +1,130 @@
-import { Link } from "react-router-dom";
-import logo from "/public/image/logo-white.png";
+/* eslint-disable react/no-unescaped-entities */
+
+import { FaFacebookF } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+
+import logoWhite from "/public/image/logo-white.png";
+import playStore from "/public/image/footer-image/playStore.svg";
+import appStore from "/public/image/footer-image/appStore.svg";
+import Guardians_Community from "/public/image/footer-image/Guardians_Community.svg";
+import Tutor_Community from "/public/image/footer-image/Tutor_Community.svg";
 
 const Footer = () => {
   return (
-    <>
-      <footer data-aos="zoom-in-down" className="bg-blue-500 text-white py-5 font-custom">
-        <div className="max-w-screen-md  mx-auto md:flex justify-between items-center footer footer-center p-10 text-base-content rounded">
-          <div className="flex-1 flex  px-2 mx-2">
-            <img src={logo} alt="footer-logo" />
-          </div>
-          <div className="flex-1">
-            <nav className="grid grid-flow-col gap-4 text-white">
-              <Link className="link link-hover">About us</Link>
-              <Link className="link link-hover">Contact</Link>
-              <Link className="link link-hover">Jobs</Link>
-              <Link className="link link-hover">Press kit</Link>
-            </nav>
-            <nav>
-              <div className="grid grid-flow-col gap-4 text-white">
-                <a>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    className="fill-current"
-                  >
-                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-                  </svg>
+    <footer className="bg-[#e12454] py-8">
+      <div className="mx-5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <div className="">
+              <img src={logoWhite} alt="logo" className="mb-4 w-[200px]" />
+              <p className="text-white">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut.
+              </p>
+            </div>
+            <div className="">
+              <h3 className="text-[22px] font-bold text-white mb-8">
+                Quick Links
+              </h3>
+              <ul className="text-white flex flex-col gap-1">
+                <li className="cursor-pointer transition-all duration-300 ease-in-out hover:font-bold">
+                  Departments
+                </li>
+                <li className="cursor-pointer transition-all duration-300 ease-in-out hover:font-bold">
+                  Our Doctors
+                </li>
+                <li className="cursor-pointer transition-all duration-300 ease-in-out hover:font-bold">
+                  News
+                </li>
+                <li className="cursor-pointer transition-all duration-300 ease-in-out hover:font-bold">
+                  Contact Us
+                </li>
+                <li className="cursor-pointer transition-all duration-300 ease-in-out hover:font-bold">
+                  FAQ
+                </li>
+                <li className="cursor-pointer transition-all duration-300 ease-in-out hover:font-bold">
+                  Book an Appointment
+                </li>
+              </ul>
+            </div>
+            <div className="">
+              <h3 className="text-[22px] font-bold text-white mb-8">Social</h3>
+              <div className="text-white">
+                <a href="#" className="flex items-center gap-1 pb-1">
+                  <FaFacebookF />{" "}
+                  <span className="cursor-pointer transition-all duration-300 ease-in-out hover:font-bold">
+                    Facebook
+                  </span>
                 </a>
-                <a>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    className="fill-current"
-                  >
-                    <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-                  </svg>
+                <a href="#" className="flex items-center gap-1 pb-1">
+                  <FaYoutube />{" "}
+                  <span className="cursor-pointer transition-all duration-300 ease-in-out hover:font-bold">
+                    Youtube
+                  </span>
                 </a>
-                <a>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    className="fill-current"
-                  >
-                    <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-                  </svg>
+                <a href="#" className="flex items-center gap-1 pb-1">
+                  <FaLinkedinIn />{" "}
+                  <span className="cursor-pointer transition-all duration-300 ease-in-out hover:font-bold">
+                    Linkedin
+                  </span>
+                </a>
+                <a href="#" className="flex items-center gap-1">
+                  <FaInstagram />{" "}
+                  <span className="cursor-pointer transition-all duration-300 ease-in-out hover:font-bold">
+                    Instagram
+                  </span>
                 </a>
               </div>
-            </nav>
+              <h2 className="text-[22px] font-bold text-white pt-1">
+                Join Our Community
+              </h2>
+              <div className="flex items-center gap-2 pt-1">
+                <img
+                  src={Guardians_Community}
+                  className="cursor-pointer w-28"
+                  alt="Guardians_Community"
+                />
+                <img
+                  src={Tutor_Community}
+                  className="cursor-pointer w-28"
+                  alt="Tutor_Community"
+                />
+              </div>
+            </div>
+            <div className="">
+              <h3 className="text-[22px] font-bold text-white mb-8">
+                Office Address
+              </h3>
+              <p className="text-white">Chennai 120, Chennai -5000, India</p>
+              <h2 className="text-[22px] font-bold text-white pt-10">
+                Download Our App
+              </h2>
+              <div className="flex items-center gap-2 pt-1">
+                <img
+                  src={playStore}
+                  className="cursor-pointer w-28"
+                  alt="playstore"
+                />
+                <img
+                  src={appStore}
+                  className="cursor-pointer w-28"
+                  alt="appstore"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="pt-10">
+            <p className="text-center text-base font-bold text-white">
+              Copyright © 2024 Rahulfordev. All Rights Reserved.
+            </p>
           </div>
         </div>
-        <aside className="text-center">
-          <p className="px-2 lg:px-0">
-            Copyright © 2023 - All right reserved by Medical Care Healthy
-          </p>
-        </aside>
-      </footer>
-    </>
+      </div>
+    </footer>
   );
 };
 

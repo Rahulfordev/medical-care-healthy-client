@@ -71,7 +71,7 @@ const AllUsers = () => {
                   {user?.role !== "admin" && (
                     <button
                       onClick={() => handleMakeAdmin(user._id)}
-                      className="px-2 py-1 rounded-lg text-white bg-blue-600 hover:bg-blue-700"
+                      className="px-2 py-1 rounded-lg text-white bg-[#e12454] hover:bg-[#e12453d7]"
                     >
                       Make Admin
                     </button>

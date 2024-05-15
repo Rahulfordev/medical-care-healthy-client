@@ -5,14 +5,18 @@ import AvailableAppointments from "../AvailableAppointments/AvailableAppointment
 const Appointment = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
   return (
-    <div className="max-w-7xl mx-auto">
-      <AppointmentBanner
-        selectedDate={selectedDate}
-        setSelectedDate={setSelectedDate}
-      ></AppointmentBanner>
-      <AvailableAppointments
-        selectedDate={selectedDate}
-      ></AvailableAppointments>
+    <div className="">
+      <div className="">
+        <div className="">
+          <AppointmentBanner
+            selectedDate={selectedDate}
+            setSelectedDate={setSelectedDate}
+          ></AppointmentBanner>
+          <AvailableAppointments
+            selectedDate={selectedDate}
+          ></AvailableAppointments>
+        </div>
+      </div>
     </div>
   );
 };
