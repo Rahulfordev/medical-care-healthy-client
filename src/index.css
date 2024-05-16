@@ -9,6 +9,18 @@ body {
   color: black;
 }
 
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-track {
+  background: white;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #e12454;
+  border-radius: 20px;
+  border: 3px solid white;
+}
+
 .hospital-img {
   max-width: 80% !important;
 }

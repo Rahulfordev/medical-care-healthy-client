@@ -21,8 +21,46 @@
   object-fit: cover;
 }
 
-@media screen and (min-width: 768px) {
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: #fff;
+  color: #10111e;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  transition: 0.3s;
+  font-weight: 800;
+  &:hover {
+    background-color: #e12454;
+    box-shadow: 0 6px 12px 0 rgba(254, 69, 54, 0.4);
+    color: #fff;
+  }
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px;
+}
+
+.swiper-slide img {
+  height: 20rem;
+}
+
+@media screen and (max-width: 767px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 640px) {
   .swiper-slide img {
     height: 30rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .swiper-slide img {
+    height: 40rem;
   }
 }

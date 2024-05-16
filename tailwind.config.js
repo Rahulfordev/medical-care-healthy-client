@@ -11,6 +11,9 @@ export default {
       fontFamily: {
         custom: ["Roboto", "sans-serif"],
       },
+      boxShadow: {
+        custom: ['0 8px 16px 0 rgba(225, 36, 84, .2)'],
+      },
     },
   },
   plugins: [require("daisyui")],

@@ -17,7 +17,7 @@ function Sidebar() {
       <div className="drawer-content group flex flex-col items-center justify-center">
         <label
           htmlFor="my-drawer-2"
-          className="group-hover:bg-[#e12454] ml-8 btn bg-transparent border-none drawer-button lg:hidden"
+          className="group-hover:bg-[#e12454] ml-8 btn bg-transparent border-none drawer-button lg:hidden"  
         >
           <FiAlignLeft className="text-2xl text-black group-hover:text-white" />
         </label>
