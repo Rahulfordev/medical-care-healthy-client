@@ -14,6 +14,7 @@ import { FaPlay } from "react-icons/fa";
 
 import heroOne from "/public/image/hero-image/hero-1.jpg";
 import heroTwo from "/public/image/hero-image/hero-2.jpg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -37,10 +38,12 @@ const Header = () => {
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
-              <div className="mt-3 sm:mt-4 md:mt-8 flex gap-4 justify-center md:justify-start">
-                <button className="hover:bg-[#8fb569] bg-[#e12454] text-white rounded-full px-8 py-3 uppercase text-sm font-medium transition-all duration-300 ease-in-out shadow-custom cursor-pointer">
-                  make appointment
-                </button>
+              <div className="mt-3 sm:mt-4 md:mt-8 flex gap-4 justify-center items-center  md:justify-start">
+                <Link to={"/appointment"}>
+                  <button className="hover:bg-[#8fb569] bg-[#e12454] text-white rounded-full px-8 py-4 uppercase text-sm font-medium transition-all duration-300 ease-in-out shadow-custom cursor-pointer">
+                    make appointment
+                  </button>
+                </Link>
                 <button className="hover:bg-[#8fb569] bg-[#e12454] text-white rounded-full w-14 h-14 uppercase text-sm font-medium transition-all duration-300 ease-in-out hover:shadow-custom flex items-center justify-center cursor-pointer">
                   <FaPlay />
                 </button>
@@ -60,10 +63,12 @@ const Header = () => {
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
-              <div className="mt-3 sm:mt-4 md:mt-8 flex gap-4 justify-center md:justify-start">
-                <button className="hover:bg-[#8fb569] bg-[#e12454] text-white rounded-full px-8 py-3 uppercase text-sm font-medium transition-all duration-300 ease-in-out shadow-custom cursor-pointer">
-                  make appointment
-                </button>
+              <div className="mt-3 sm:mt-4 md:mt-8 flex gap-4 items-center justify-center md:justify-start">
+                <Link to={"/appointment"}>
+                  <button className="hover:bg-[#8fb569] bg-[#e12454] text-white rounded-full px-8 py-4 uppercase text-sm font-medium transition-all duration-300 ease-in-out shadow-custom cursor-pointer">
+                    make appointment
+                  </button>
+                </Link>
                 <button className="hover:bg-[#8fb569] bg-[#e12454] text-white rounded-full w-14 h-14 uppercase text-sm font-medium transition-all duration-300 ease-in-out hover:shadow-custom flex items-center justify-center cursor-pointer">
                   <FaPlay />
                 </button>
